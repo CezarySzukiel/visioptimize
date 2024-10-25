@@ -1,5 +1,5 @@
 {
-  "name": "cra-template-react-tsx-template",
+  "name": "cra-template-[react-tsx-template]",
   "version": "1.0.0",
   "description": "A custom Create React App template with TypeScript, Redux, and React Router setup",
   "keywords": ["create-react-app", "template", "typescript", "redux", "react-router"],
