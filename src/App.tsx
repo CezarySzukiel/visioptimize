@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import { useRoutes } from 'react-router-dom';
@@ -12,9 +12,14 @@ import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
+import { useSelector, useDispatch } from 'react-redux';
+import { loadBackgroundImage } from './redux/actions';
+import { RootState } from './redux/types';
 
 function App() {
     const element = useRoutes(routes);
+    const dispatch = useDispatch();
+    const backgroundImageUrl = useSelector((state: RootState) => state.background.backgroundImageUrl);
     const theme = createTheme({
         palette: {
             primary: {
@@ -37,6 +42,11 @@ function App() {
             },
         },
     });
+
+    useEffect(() => {
+        dispatch(loadBackgroundImage());
+    }, [dispatch]);
+
     return (
         <ThemeProvider theme={theme}>
             <CssBaseline />
