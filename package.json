@@ -2,7 +2,13 @@
   "name": "cra-template-react-tsx-redux-template",
   "version": "1.0.0",
   "description": "A custom Create React App template with TypeScript, Redux, and React Router setup",
-  "keywords": ["create-react-app", "template", "typescript", "redux", "react-router"],
+  "keywords": [
+    "create-react-app",
+    "template",
+    "typescript",
+    "redux",
+    "react-router"
+  ],
   "main": "template",
   "files": [
     "template"
@@ -17,6 +23,7 @@
     "@types/node": "^16.18.115",
     "@types/react": "^18.3.12",
     "@types/react-dom": "^18.3.1",
+    "axios": "^1.7.7",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-redux": "^9.1.2",
