@@ -1,1 +1,5 @@
-export const HeaderHeight: string = '64px'
+export const headerHeight: string = '64px'
+
+export const containersColor: string = 'rgb(0 0 0 / 50%)'
+
+export const containersBorderRadius: string = '8px'

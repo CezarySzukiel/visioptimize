@@ -7,13 +7,13 @@ import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
-import { HeaderHeight } from '../pageSettings';
+import { headerHeight } from '../pageSettings';
 
 const Header: React.FC = () => {
   return (
         <AppBar sx={{
             backgroundColor: 'rgba(0, 0, 0, 0.5)',
-            height: HeaderHeight,
+            height: headerHeight,
             }}
         >
           <Toolbar>

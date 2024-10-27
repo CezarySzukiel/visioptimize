@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container, Box, Typography, Button } from '@mui/material';
-import { HeaderHeight } from '../pageSettings';
+import { headerHeight, containersColor, containersBorderRadius } from '../pageSettings';
 
 const HeroSection: React.FC = () => {
   return (
@@ -13,11 +13,11 @@ const HeroSection: React.FC = () => {
           justifyContent: 'center',
           minHeight: '20vh',
           textAlign: 'center',
-          backgroundColor: 'rgb(0 0 0 / 50%)',
+          backgroundColor: containersColor,
           padding: '2rem',
-          borderRadius: '8px',
+          borderRadius: containersBorderRadius,
           color: 'white',
-          marginTop: HeaderHeight,
+          marginTop: headerHeight,
         }}
       >
         <Typography variant="h2" component="h1" gutterBottom>
