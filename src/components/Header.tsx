@@ -7,10 +7,15 @@ import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
+import { HeaderHeight } from '../pageSettings';
 
 const Header: React.FC = () => {
   return (
-        <AppBar sx={{ backgroundColor: 'rgba(0, 0, 0, 0.5)' }}>
+        <AppBar sx={{
+            backgroundColor: 'rgba(0, 0, 0, 0.5)',
+            height: HeaderHeight,
+            }}
+        >
           <Toolbar>
             <Box display="flex" alignItems="center">
           <img src="/Visioptimize_logo.png" alt="Logo" style={{ marginRight: '16px', height: '40px' }} />
