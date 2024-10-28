@@ -12,6 +12,7 @@ import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
 import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
+import { Parallax } from "react-parallax";
 
 function App() {
   const element = useRoutes(routes);
@@ -45,20 +46,11 @@ function App() {
     <ThemeProvider theme={theme}>
       <CssBaseline />
 
-      <Box
-        sx={{
-          backgroundImage: "url(/bgr.jpg)",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          minHeight: "100vh",
-          display: "flex",
-          flexDirection: "column",
-        }}
-      >
+      <Parallax bgImage="/bgr.jpg" strength={300}>
         <Header />
         {element}
         <Footer />
-      </Box>
+      </Parallax>
     </ThemeProvider>
   );
 }

@@ -1,0 +1,70 @@
+{
+  "packages": [
+    {
+      "name": "Pakiet Minimum",
+      "price": "597",
+      "description": "Tworzymy i uzupełniamy wizytówkę Google (Google Moja Firma) oraz dodajemy podstawową stronę internetową, aby Twoja firma była łatwiej dostępna online."
+    },
+    {
+      "name": "Pakiet Standard",
+      "price": "797",
+      "description": "Tworzymy profesjonalną wizytówkę Google i podstawową stronę internetową Twojej firmy. Zajmujemy się również pozycjonowaniem, analizując kluczowe słowa, aby zwiększyć widoczność Twojego biznesu w wyszukiwarkach."
+    },
+    {
+      "name": "Pakiet Komfort",
+      "price": "990",
+      "description": "Oferujemy kompleksowe tworzenie i pozycjonowanie wizytówki Google (Google Moja Firma), a także tworzenie oraz podstawowe pozycjonowanie strony internetowej. Zajmujemy się regularną opieką nad wizytówką: publikujemy do 4 postów miesięcznie i odpowiadamy na opinie klientów. Co miesiąc dostarczamy raport widoczności Twojej firmy dla wybranych słów kluczowych.\n\nCena: od 997 zł za pierwszy miesiąc (zależna od wymagań dotyczących strony internetowej), następnie 250 zł miesięcznie. Możliwość rezygnacji w dowolnym momencie."
+    },
+    {
+      "name": "Pakiet Premium",
+      "price": "1390",
+      "description": "W ramach pakietu Premium oferujemy kompleksowe tworzenie wizytówki Google (Google Moja Firma) oraz strony internetowej. Zajmujemy się ich pozycjonowaniem, aby zwiększyć widoczność w Google. W cenie pakietu zapewniamy również utrzymanie strony internetowej. Co miesiąc dostarczamy raporty dotyczące widoczności Twojej firmy dla wybranych słów kluczowych oraz dodajemy 8 postów miesięcznie na wizytówce Google i stronie. Ponadto, przeprowadzamy analizę SEO, aby optymalizować treści i poprawić promocję Twojego biznesu w Google oraz zarządzamy opiniami klientów.\n\nCena: 1390 zł za pierwszy miesiąc, a w kolejnych miesiącach 497 zł. Możliwość rezygnacji w każdej chwili."
+    }
+  ],
+  "google_my_business": [
+    {
+      "name": "Tworzenie wizytówki google",
+      "price": "297",
+      "description": "Tworzymy i uzupełniamy wizytówkę Google (Google Moja Firma) dla Twojej firmy, dbając o każdy detal, aby zwiększyć jej widoczność w Google. W procesie tym uwzględniamy kluczowe słowa, które pomogą potencjalnym klientom łatwiej znaleźć Twoją firmę w wynikach wyszukiwania. Nasza usługa obejmuje optymalizację treści, co pozwoli na efektywną promocję Twojego biznesu w Google Maps i lepsze zarządzanie opiniami klientów."
+    },
+    {
+      "name": "Pozycjonowanie wizytówki google",
+      "price": "297",
+      "description": "Pozycjonujemy Twoją wizytówkę Google, aby zajmowała jak najwyższe miejsca w wynikach lokalnego wyszukiwania. Dzięki odpowiedniej optymalizacji, zwiększamy jej widoczność, co przyciąga więcej klientów do Twojego biznesu. Usługa ta wymaga posiadania przynajmniej podstawowej strony internetowej lub konta w mediach społecznościowych, aby efektywnie wspierać proces pozycjonowania."
+    },
+    {
+      "name": "Odzyskiwanie wizytówki google",
+      "price": "100",
+      "description": "Nie masz dostępu do swojej wizytówki Google? Nic straconego! Nasza usługa pomoże Ci w odzyskaniu dostępu do Twojej wizytówki (Google Moja Firma). Zajmiemy się wszelkimi formalnościami, aby przywrócić pełną kontrolę nad Twoją obecnością w sieci."
+    },
+    {
+      "name": "Audyt SEO wizytówki google",
+      "price": "149",
+      "description": "Przeprowadzamy audyt SEO wizytówki Google (Google Moja Firma) Twojej firmy, aby ocenić jej widoczność i skuteczność w lokalnych wyszukiwaniach. Analizujemy kluczowe słowa, optymalizację treści oraz zarządzanie opiniami klientów, co pozwoli na poprawę pozycji Twojej wizytówki w wynikach wyszukiwania Google."
+    }
+  ],
+  "websites": [
+    {
+      "name": "Tworzenie stron internetowych",
+      "price": "od 500",
+      "description": "Stworzymy profesjonalną stronę internetową dla Twojej firmy, dostosowaną do Twoich potrzeb i wymagań. Nasza usługa obejmuje optymalizację treści, aby zwiększyć widoczność w wyszukiwarkach, co pozytywnie wpłynie na promocję Twojego biznesu w Google. Dbamy o estetykę oraz funkcjonalność, zapewniając, że Twoja strona będzie atrakcyjna i łatwa w nawigacji.\n\nw cenie usługi oferujemy domenę, hosting oraz ssl na rok"
+    },
+    {
+      "name": "Pozycjonowanie stron internetowych",
+      "price": "od 590",
+      "description": "Zadbamy o to, aby Twoja strona internetowa znajdowała się jak najwyżej w wynikach wyszukiwania. Nasza usługa obejmuje kompleksową optymalizację SEO, analizę słów kluczowych oraz dostosowanie treści, co przyczyni się do zwiększenia widoczności Twojego biznesu w Google. Dzięki naszym działaniom, przyciągniesz więcej klientów i poprawisz swoją obecność online."
+    }
+  ],
+  "applications": [
+    {
+      "name": "Aplikacje web",
+      "price": "ustalana indywidualnie",
+      "description": "Stworzymy zaawansowaną aplikację webową dostosowaną do potrzeb Twojej firmy, która będzie zawierała niezbędną infrastrukturę, monitoring oraz bazę danych. Nasza usługa obejmuje projektowanie i rozwój aplikacji, z naciskiem na wydajność oraz bezpieczeństwo systemu. Integrujemy także elementy sztucznej inteligencji (AI), co pozwoli na automatyzację procesów, analizę danych oraz personalizację doświadczeń użytkowników. Ponadto, zajmujemy się utrzymaniem aplikacji, zapewniając regularne aktualizacje i wsparcie techniczne, co pozwoli Ci skoncentrować się na rozwoju biznesu, a nie na aspektach technologicznych."
+    },
+    {
+      "name": "Automatyzacja pracy",
+      "price": "ustalana indywidualnie",
+      "description": "Zautomatyzuj powtarzalne zadania w swojej firmie dzięki dedykowanym programom do automatyzacji. Oferujemy tworzenie rozwiązań, które zoptymalizują Twoje codzienne procesy, eliminując potrzebę ręcznego wykonywania powtarzalnych zadań. Dzięki naszym programom oszczędzisz czas i zwiększysz efektywność swojego zespołu, automatyzując działania takie jak przetwarzanie danych, generowanie raportów, komunikację z klientami czy zarządzanie projektami.\n\nNasze rozwiązania są dostosowane do indywidualnych potrzeb i mogą być zintegrowane z już istniejącymi systemami, zapewniając płynne działanie. Zajmujemy się także wsparciem technicznym i utrzymaniem oprogramowania, aby zapewnić jego niezawodność i aktualność."
+    }
+  ]
+}

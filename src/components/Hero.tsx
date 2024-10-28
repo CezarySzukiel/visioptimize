@@ -1,22 +1,26 @@
-import React from 'react';
-import { Container, Box, Typography, Button } from '@mui/material';
-import { headerHeight, containersColor, containersBorderRadius } from '../pageSettings';
+import React from "react";
+import { Container, Box, Typography } from "@mui/material";
+import {
+  headerHeight,
+  containersColor,
+  containersBorderRadius,
+} from "../pageSettings";
 
 const HeroSection: React.FC = () => {
   return (
     <Container maxWidth="md">
       <Box
         sx={{
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
-          justifyContent: 'center',
-          minHeight: '20vh',
-          textAlign: 'center',
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          justifyContent: "center",
+          minHeight: "20vh",
+          textAlign: "center",
           backgroundColor: containersColor,
-          padding: '2rem',
+          padding: "2rem",
           borderRadius: containersBorderRadius,
-          color: 'white',
+          color: "white",
           marginTop: headerHeight,
         }}
       >
