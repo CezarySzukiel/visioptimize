@@ -14,7 +14,9 @@ interface TextSectionProps {
   text: string;
 }
 
-const CenterBox: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+export const CenterBox: React.FC<{ children: React.ReactNode }> = ({
+  children,
+}) => {
   return (
     <Box
       sx={{
@@ -31,12 +33,7 @@ const CenterBox: React.FC<{ children: React.ReactNode }> = ({ children }) => {
 const TextSection: React.FC<TextSectionProps> = ({ text }) => {
   return (
     <CenterBox>
-      <CardContent
-        sx={{
-          backgroundColor: containersColor,
-          borderRadius: containersBorderRadius,
-        }}
-      >
+      <CardContent>
         <Typography variant="h6" component="h6" sx={{ textAlign: "center" }}>
           {text}
         </Typography>
@@ -52,6 +49,7 @@ const AboutSection: React.FC = () => {
       maxWidth="md"
       sx={{
         marginTop: "2rem",
+        marginBottom: "5rem",
       }}
     >
       <Stack spacing={4}>

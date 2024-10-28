@@ -3,7 +3,7 @@ import logo from "./logo.svg";
 import "./App.css";
 import { useRoutes } from "react-router-dom";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
-import { red, orange, blue } from "@mui/material/colors";
+import { red, orange, blue, yellow } from "@mui/material/colors";
 import routes from "./routes";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
@@ -12,14 +12,13 @@ import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
 import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
-import { Parallax } from "react-parallax";
 
 function App() {
   const element = useRoutes(routes);
   const theme = createTheme({
     palette: {
       primary: {
-        main: blue[900],
+        main: "#202020",
       },
       secondary: {
         main: orange[500],
@@ -31,7 +30,7 @@ function App() {
         main: orange[500],
       },
       info: {
-        main: blue[500],
+        main: yellow[500],
       },
       success: {
         main: blue[500],
@@ -45,12 +44,16 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-
-      <Parallax bgImage="/bgr.jpg" strength={300}>
+      <Box
+        sx={{
+          backgroundColor: "#202020",
+          minHeight: "100vh",
+        }}
+      >
         <Header />
         {element}
         <Footer />
-      </Parallax>
+      </Box>
     </ThemeProvider>
   );
 }

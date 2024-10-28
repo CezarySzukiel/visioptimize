@@ -17,7 +17,6 @@ const HeroSection: React.FC = () => {
           justifyContent: "center",
           minHeight: "20vh",
           textAlign: "center",
-          backgroundColor: containersColor,
           padding: "2rem",
           borderRadius: containersBorderRadius,
           color: "white",
@@ -27,7 +26,7 @@ const HeroSection: React.FC = () => {
         <Typography variant="h2" component="h1" gutterBottom>
           Zbuduj z nami swoją markę
         </Typography>
-        <Typography variant="h5" component="p" gutterBottom>
+        <Typography variant="h5" component="h2" gutterBottom>
           Profesjonalne SEO wizytówek google i stron internetowych
         </Typography>
       </Box>
