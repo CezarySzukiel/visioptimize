@@ -4,7 +4,9 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./offer.css";
 import offer from "../offer.json";
-import { Container, Box, Typography } from "@mui/material";
+import { Container, Box, Typography, Grid, Slide, Fade } from "@mui/material";
+import { useTheme } from "@mui/material/styles";
+import { useInView } from "react-intersection-observer";
 import {
   headerHeight,
   containersColor,
@@ -17,13 +19,20 @@ interface Offer {
   price: string;
 }
 
+interface OfferPackage {
+  title: string;
+  offers: Offer[];
+}
+
 const CustomBox = ({ children }: { children: React.ReactNode }) => {
+  const theme = useTheme();
+
   return (
     <Box
       sx={{
         width: "80%",
         margin: "4rem auto 0 auto",
-        borderTop: "1px solid white",
+        borderTop: `1px solid ${theme.palette.secondary.light}`,
         display: "flex",
         height: "100%",
       }}
@@ -33,31 +42,78 @@ const CustomBox = ({ children }: { children: React.ReactNode }) => {
   );
 };
 
-const OfferBox: React.FC<Offer> = ({ name, price }) => {
-  return (
-    <Container maxWidth="xs">
-      <Box
-        sx={{
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          justifyContent: "center",
-          minHeight: "20vh",
-          textAlign: "center",
-          padding: "1rem",
-          borderRadius: containersBorderRadius,
-          color: "white",
-        }}
-      >
-        <Typography variant="h4" component="h1" gutterBottom>
-          {name}
-        </Typography>
+const OfferBox: React.FC<Offer & { index: number }> = ({
+  name,
+  price,
+  index,
+}) => {
+  const theme = useTheme();
+  const { ref, inView } = useInView({
+    triggerOnce: false,
+    threshold: 0.1,
+  });
 
-        <Typography variant="h6" component="p" gutterBottom>
-          Cena {price}
+  return (
+    <Grid item xs={12} sm={6} md={4}>
+      <div ref={ref}>
+        <Slide
+          direction="left"
+          in={inView}
+          timeout={{
+            enter: theme.transitions.duration.enteringScreen + index * 300,
+            exit: theme.transitions.duration.leavingScreen,
+          }}
+        >
+          <Container
+            sx={{
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              justifyContent: "center",
+              minHeight: "20vh",
+              textAlign: "center",
+              padding: "1rem",
+              borderRadius: containersBorderRadius,
+              border: "1px solid white",
+              color: "white",
+              margin: "1rem",
+            }}
+          >
+            <Typography variant="h4" component="h1" gutterBottom>
+              {name}
+            </Typography>
+
+            <Typography variant="h6" component="p" gutterBottom>
+              Cena {price}
+            </Typography>
+          </Container>
+        </Slide>
+      </div>
+    </Grid>
+  );
+};
+
+const OfferPackage: React.FC<OfferPackage> = ({ title, offers }) => {
+  return (
+    <>
+      <CustomBox>
+        <Typography variant="h3" component="h2" gutterBottom>
+          {title}
         </Typography>
-      </Box>
-    </Container>
+      </CustomBox>
+      <CenterBox>
+        <Grid container spacing={2} maxWidth="80%">
+          {offers.map((offer, index) => (
+            <OfferBox
+              key={offer.name}
+              name={offer.name}
+              price={offer.price}
+              index={index}
+            />
+          ))}
+        </Grid>
+      </CenterBox>
+    </>
   );
 };
 
@@ -99,54 +155,17 @@ const OfferSection: React.FC = () => {
           Nasza oferta
         </Typography>
       </Box>
-      <CustomBox>
-        <Typography variant="h3" component="h2" gutterBottom>
-          Pakiety
-        </Typography>
-      </CustomBox>
-      <Slider {...settings} ref={sliderRef1} asNavFor={nav2}>
-        {offer.packages.map((offer) => (
-          <div key={offer.name}>
-            <OfferBox name={offer.name} price={offer.price} />
-          </div>
-        ))}
-      </Slider>
-      <CustomBox>
-        <Typography variant="h3" component="h2" gutterBottom>
-          Wizytówki google
-        </Typography>
-      </CustomBox>
-      <Slider {...settings} asNavFor={nav1}>
-        {offer.google_my_business.map((offer) => (
-          <div key={offer.name}>
-            <OfferBox name={offer.name} price={offer.price} />
-          </div>
-        ))}
-      </Slider>
-      <CustomBox>
-        <Typography variant="h3" component="h2" gutterBottom>
-          Strony internetowe
-        </Typography>
-      </CustomBox>
-      <Slider {...settings} asNavFor={nav1}>
-        {offer.websites.map((offer) => (
-          <div key={offer.name}>
-            <OfferBox name={offer.name} price={offer.price} />
-          </div>
-        ))}
-      </Slider>
-      <CustomBox>
-        <Typography variant="h3" component="h2" gutterBottom>
-          Aplikacje
-        </Typography>
-      </CustomBox>
-      <Slider {...settings} asNavFor={nav1}>
-        {offer.applications.map((offer) => (
-          <div key={offer.name}>
-            <OfferBox name={offer.name} price={offer.price} />
-          </div>
-        ))}
-      </Slider>
+
+      <OfferPackage title="Pakiety" offers={offer.packages} />
+
+      <OfferPackage
+        title="Wizytówki google"
+        offers={offer.google_my_business}
+      />
+
+      <OfferPackage title="Strony internetowe" offers={offer.websites} />
+
+      <OfferPackage title="Aplikacje" offers={offer.applications} />
     </>
   );
 };

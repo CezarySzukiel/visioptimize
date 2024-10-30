@@ -9,6 +9,7 @@ import {
   CardContent,
 } from "@mui/material";
 import { containersColor, containersBorderRadius } from "../pageSettings";
+import { useTheme } from "@mui/material/styles";
 
 interface TextSectionProps {
   text: string;
@@ -42,6 +43,7 @@ const TextSection: React.FC<TextSectionProps> = ({ text }) => {
   );
 };
 const AboutSection: React.FC = () => {
+  const theme = useTheme();
   const imgSize: string = "200px";
 
   return (
@@ -64,13 +66,14 @@ const AboutSection: React.FC = () => {
                   style={{
                     width: imgSize,
                     borderRadius: containersBorderRadius,
+                    boxShadow: `0px 0px 15px 0px ${theme.palette.primary.dark}`,
                   }}
                 />
               </CenterBox>
             </Grid>
             <Grid item xs={12} md={6}>
               <TextSection
-                text={"Poprawimy Widoczność Twojej firmy w internecie."}
+                text={"Popraw widoczność Twojej firmy w internecie."}
               />
             </Grid>
           </Grid>
@@ -80,16 +83,17 @@ const AboutSection: React.FC = () => {
         <Box>
           <Grid container spacing={2}>
             <Grid item xs={12} md={6}>
-              <TextSection text={"Znajdziemy dla Ciebie nowych klientów."} />
+              <TextSection text={"Znajdź nowych klientów"} />
             </Grid>
             <Grid item xs={12} md={6}>
               <CenterBox>
                 <img
                   src="/nowi klienci.jpg"
-                  alt="Description 2"
+                  alt="ludzie na ulicy"
                   style={{
                     width: imgSize,
                     borderRadius: containersBorderRadius,
+                    boxShadow: `0px 0px 15px 0px ${theme.palette.primary.dark}`,
                   }}
                 />
               </CenterBox>
@@ -104,16 +108,17 @@ const AboutSection: React.FC = () => {
               <CenterBox>
                 <img
                   src="dochody.jpg"
-                  alt="Description 3"
+                  alt="kobieta z laptopem, spadające banknoty"
                   style={{
                     width: imgSize,
                     borderRadius: containersBorderRadius,
+                    boxShadow: `0px 0px 15px 0px ${theme.palette.primary.dark}`,
                   }}
                 />
               </CenterBox>
             </Grid>
             <Grid item xs={12} md={6}>
-              <TextSection text={"Zwiększymy Twoje przychody."} />
+              <TextSection text={"Zwiększ swoje przychody."} />
             </Grid>
           </Grid>
         </Box>

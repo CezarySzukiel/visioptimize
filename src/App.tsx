@@ -19,9 +19,11 @@ function App() {
     palette: {
       primary: {
         main: "#202020",
+        dark: "#000000",
       },
       secondary: {
-        main: orange[500],
+        light: "#ff7961",
+        main: "#492111",
       },
       error: {
         main: red.A400,
@@ -37,7 +39,13 @@ function App() {
       },
       text: {
         primary: "#ffffff",
-        secondary: "#ffffff",
+        secondary: "#c0c0c0",
+      },
+    },
+    transitions: {
+      duration: {
+        enteringScreen: 225,
+        leavingScreen: 195,
       },
     },
   });
