@@ -8,6 +8,7 @@ import {
   Menu,
   MenuItem,
 } from "@mui/material";
+import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import { Link, useLocation } from "react-router-dom";
 import { useTheme } from "@mui/material/styles";
 import { headerHeight } from "../pageSettings";
@@ -61,24 +62,20 @@ const CustomLink: React.FC<CustomLinkProps> = ({ to, children }) => {
 const Header: React.FC = () => {
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
   const theme = useTheme();
+  const open = Boolean(anchorEl);
 
-  const handleMouseEnter = (event: React.MouseEvent<HTMLElement>) => {
+  const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
     setAnchorEl(event.currentTarget);
   };
-
-  const handleMouseLeave = () => {
+  const handleClose = () => {
     setAnchorEl(null);
-  };
-
-  const handleMouseClick = () => {
-    console.log("nic");
   };
 
   const renderMenuItems = (offers: Offer[]) => {
     return offers.map((item) => (
       <MenuItem
         key={item.name}
-        onClick={handleMouseLeave}
+        onClick={handleClose}
         component={Link}
         to={item.adres}
       >
@@ -109,30 +106,37 @@ const Header: React.FC = () => {
         </CustomLink>
         <Box flexGrow={1} />
         <Box sx={{ display: "flex", flexDirection: "row" }}>
-          <CustomLink to="/#oferta">
-            <Button
-              aria-controls="oferta-menu"
-              aria-haspopup="true"
-              onMouseEnter={handleMouseEnter}
-              onClick={handleMouseClick}
-              sx={{ color: "inherit", textTransform: "none" }}
-            >
-              Oferta
-            </Button>
-          </CustomLink>
-          <Menu
-            anchorEl={anchorEl}
-            keepMounted
-            open={Boolean(anchorEl)}
-            onClose={handleMouseLeave}
-            MenuListProps={{
-              onMouseLeave: handleMouseLeave,
+          <Button
+            aria-controls={open ? "basic-menu" : undefined}
+            aria-haspopup="true"
+            aria-expanded={open ? "true" : undefined}
+            onClick={handleClick}
+            sx={{
+              color: `${theme.palette.text.primary}`,
+              textTransform: "none",
             }}
+          >
+            Oferta
+            <ArrowDropDownIcon />
+          </Button>
+          <Menu
+            id="basic-menu"
+            anchorEl={anchorEl}
+            open={open}
+            onMouseLeave={handleClose}
+            onClick={handleClose}
+            MenuListProps={{
+              onMouseLeave: (event) => {
+                handleClose();
+              },
+            }}
+            role="menu"
             sx={{
               "& .MuiPaper-root": {
                 backgroundColor: `${theme.palette.primary.main}`,
                 color: "white",
                 boxShadow: "0px 10px 10px 0px rgba(0,0,0,0.75)",
+                size: "auto",
               },
             }}
           >
@@ -142,7 +146,7 @@ const Header: React.FC = () => {
             {renderMenuItems(offer.applications)}
           </Menu>
           <CustomLink to="/o-nas">
-            <Button sx={{ textTransform: "none" }}>
+            <Button sx={{ textTransform: "none" }} onClick={handleClose}>
               <Box
                 marginRight="1rem"
                 sx={{
