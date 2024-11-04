@@ -42,7 +42,7 @@ const TextSection: React.FC<TextSectionProps> = ({ text }) => {
     </CenterBox>
   );
 };
-const AboutSection: React.FC = () => {
+const IntroSection: React.FC = () => {
   const theme = useTheme();
   const imgSize: string = "200px";
 
@@ -127,4 +127,4 @@ const AboutSection: React.FC = () => {
   );
 };
 
-export default AboutSection;
+export default IntroSection;

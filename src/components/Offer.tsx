@@ -13,7 +13,7 @@ import {
   containersColor,
   containersBorderRadius,
 } from "../pageSettings";
-import { CenterBox } from "./About";
+import { CenterBox } from "./Intro";
 
 interface Offer {
   name: string;
@@ -80,9 +80,11 @@ const OfferBox: React.FC<Offer & { index: number }> = ({
                 border: "1px solid white",
                 color: "white",
                 margin: "1rem",
+                boxShadow: `0px 0px 15px 0px ${theme.palette.primary.dark}`,
                 transition: "transform 0.3s ease, background-color 0.3s ease",
                 "&:hover": {
-                  backgroundColor: "rgba(255, 255, 255, 0.1)", // Change to desired color
+                  backgroundColor: "rgba(255, 255, 255, 0.1)",
+                  boxShadow: `0px 0px 15px 0px ${theme.palette.primary.light}`,
                   transform: "scale(1.05)",
                   zIndex: 1,
                 },
