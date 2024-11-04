@@ -35,7 +35,7 @@ const Header: React.FC = () => {
           </a>
           <Box marginRight="1rem">O nas</Box>
           <a
-            href="/#kontakt"
+            href="#kontakt"
             style={{ color: "inherit", textDecoration: "none" }}
           >
             <Box marginRight="1rem">Kontakt</Box>

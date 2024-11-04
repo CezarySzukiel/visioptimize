@@ -7,7 +7,7 @@ import offer from "../offer.json";
 import { Container, Box, Typography, Grid, Slide, Fade } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
 import { useInView } from "react-intersection-observer";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import {
   headerHeight,
   containersColor,
@@ -129,18 +129,15 @@ const OfferPackage: React.FC<OfferPackage> = ({ title, offers }) => {
 };
 
 const OfferSection: React.FC = () => {
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 1000,
-    autoplaySpeed: 5000,
-    slidesToShow: 2,
-    slidesToScroll: 1,
-    autoplay: true,
-    dotsClass: "slick-dots",
-    easing: "linear",
-    swipeToSlide: true,
-  };
+  const location = useLocation();
+  useEffect(() => {
+    if (location.hash === "#oferta") {
+      const element = document.getElementById("oferta");
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  }, [location]);
   const [nav1, setNav1] = useState<any | null>(null);
   const [nav2, setNav2] = useState<any | null>(null);
   let sliderRef1 = useRef<any>(null);
