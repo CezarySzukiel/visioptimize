@@ -44,7 +44,7 @@ function App() {
     },
     transitions: {
       duration: {
-        enteringScreen: 225,
+        enteringScreen: 400,
         leavingScreen: 195,
       },
     },

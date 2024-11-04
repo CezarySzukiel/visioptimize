@@ -7,6 +7,7 @@ import offer from "../offer.json";
 import { Container, Box, Typography, Grid, Slide, Fade } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
 import { useInView } from "react-intersection-observer";
+import { Link } from "react-router-dom";
 import {
   headerHeight,
   containersColor,
@@ -17,6 +18,7 @@ import { CenterBox } from "./About";
 interface Offer {
   name: string;
   price: string;
+  adres: string;
 }
 
 interface OfferPackage {
@@ -45,49 +47,57 @@ const CustomBox = ({ children }: { children: React.ReactNode }) => {
 const OfferBox: React.FC<Offer & { index: number }> = ({
   name,
   price,
+  adres,
   index,
 }) => {
   const theme = useTheme();
   const { ref, inView } = useInView({
-    triggerOnce: false,
+    triggerOnce: true,
     threshold: 0.1,
   });
 
   return (
-    <Grid item xs={12} sm={6} md={4}>
+    <Grid item xs={12} sm={8} md={4}>
       <div ref={ref}>
-        <Slide
-          direction="left"
+        <Fade
           in={inView}
           timeout={{
             enter: theme.transitions.duration.enteringScreen + index * 300,
             exit: theme.transitions.duration.leavingScreen,
           }}
         >
-          <Container
-            sx={{
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-              justifyContent: "center",
-              minHeight: "20vh",
-              textAlign: "center",
-              padding: "1rem",
-              borderRadius: containersBorderRadius,
-              border: "1px solid white",
-              color: "white",
-              margin: "1rem",
-            }}
-          >
-            <Typography variant="h4" component="h1" gutterBottom>
-              {name}
-            </Typography>
+          <Link to={adres} style={{ textDecoration: "none" }}>
+            <Container
+              sx={{
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+                justifyContent: "center",
+                minHeight: "20vh",
+                textAlign: "center",
+                padding: "1rem",
+                borderRadius: containersBorderRadius,
+                border: "1px solid white",
+                color: "white",
+                margin: "1rem",
+                transition: "transform 0.3s ease, background-color 0.3s ease",
+                "&:hover": {
+                  backgroundColor: "rgba(255, 255, 255, 0.1)", // Change to desired color
+                  transform: "scale(1.05)",
+                  zIndex: 1,
+                },
+              }}
+            >
+              <Typography variant="h4" component="h1" gutterBottom>
+                {name}
+              </Typography>
 
-            <Typography variant="h6" component="p" gutterBottom>
-              Cena {price}
-            </Typography>
-          </Container>
-        </Slide>
+              <Typography variant="h6" component="p" gutterBottom>
+                Cena {price}
+              </Typography>
+            </Container>
+          </Link>
+        </Fade>
       </div>
     </Grid>
   );
@@ -108,6 +118,7 @@ const OfferPackage: React.FC<OfferPackage> = ({ title, offers }) => {
               key={offer.name}
               name={offer.name}
               price={offer.price}
+              adres={offer.adres}
               index={index}
             />
           ))}

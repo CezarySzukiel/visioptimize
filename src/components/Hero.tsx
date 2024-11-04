@@ -22,7 +22,7 @@ const HeroSection: React.FC = () => {
           padding: "2rem",
           borderRadius: containersBorderRadius,
           color: "white",
-          marginTop: headerHeight,
+          paddingTop: headerHeight,
           background: `linear-gradient(to bottom, ${theme.palette.secondary.main}, #202020)`,
         }}
       >
