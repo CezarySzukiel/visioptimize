@@ -27,7 +27,7 @@ const HeroSection: React.FC = () => {
         }}
       >
         <Typography variant="h2" component="h1" gutterBottom>
-          Zbuduj z nami swoją markę
+          Zbuduj swoją markę z Visioptimize
         </Typography>
         <Typography variant="h5" component="h2" gutterBottom>
           Profesjonalne SEO wizytówek google i stron internetowych

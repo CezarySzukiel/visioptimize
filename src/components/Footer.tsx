@@ -9,7 +9,7 @@ const Footer: React.FC = () => {
       style={{ top: "auto", bottom: 0, marginTop: "20px" }}
     >
       <Toolbar sx={{ display: "flex", justifyContent: "space-around" }}>
-        <Box sx={{ marginBottom: "2rem" }}>
+        <Box id="kontakt" sx={{ marginBottom: "2rem" }}>
           <Typography
             variant="body1"
             component="p"

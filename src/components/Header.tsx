@@ -1,12 +1,9 @@
 import React from "react";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import { red, orange, blue } from "@mui/material/colors";
-import AppBar from "@mui/material/AppBar";
-import Toolbar from "@mui/material/Toolbar";
-import IconButton from "@mui/material/IconButton";
+import { AppBar, Toolbar, Box, Typography, IconButton } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
-import Box from "@mui/material/Box";
-import Typography from "@mui/material/Typography";
+import { Link } from "react-router-dom";
 import { headerHeight } from "../pageSettings";
 
 const Header: React.FC = () => {
@@ -29,9 +26,21 @@ const Header: React.FC = () => {
           </Typography>
         </Box>
         <Box flexGrow={1} />
-        <IconButton edge="end" color="inherit" aria-label="menu">
-          <MenuIcon />
-        </IconButton>
+        <Box sx={{ display: "flex", flexDirection: "row" }}>
+          <a
+            href="/#oferta"
+            style={{ color: "inherit", textDecoration: "none" }}
+          >
+            <Box marginRight="1rem">Oferta</Box>
+          </a>
+          <Box marginRight="1rem">O nas</Box>
+          <a
+            href="/#kontakt"
+            style={{ color: "inherit", textDecoration: "none" }}
+          >
+            <Box marginRight="1rem">Kontakt</Box>
+          </a>
+        </Box>
       </Toolbar>
     </AppBar>
   );

@@ -151,11 +151,11 @@ const OfferSection: React.FC = () => {
   }, []);
 
   return (
-    <>
+    <Box id="oferta" marginTop={headerHeight}>
       <Box
         sx={{
           width: "80%",
-          margin: "0 auto",
+          margin: `${headerHeight} auto 0 auto`,
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
@@ -163,7 +163,7 @@ const OfferSection: React.FC = () => {
         }}
       >
         <Typography variant="h2" component="h1" gutterBottom>
-          Nasza oferta
+          Oferta
         </Typography>
       </Box>
 
@@ -177,7 +177,7 @@ const OfferSection: React.FC = () => {
       <OfferPackage title="Strony internetowe" offers={offer.websites} />
 
       <OfferPackage title="Aplikacje" offers={offer.applications} />
-    </>
+    </Box>
   );
 };
 
