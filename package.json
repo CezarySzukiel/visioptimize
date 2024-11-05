@@ -1,6 +1,6 @@
 {
   "homepage": "https://cezaryszukiel.github.io/visioptimize",
-  "name": "cra-template-react-tsx-redux-template",
+  "name": "Visioptimize",
   "version": "1.0.0",
   "description": "A custom Create React App template with TypeScript, Redux, and React Router setup",
   "keywords": [
@@ -14,7 +14,7 @@
   "files": [
     "template"
   ],
-  "private": false,
+  "private": true,
   "dependencies": {
     "@emotion/cache": "11.10.7",
     "@emotion/react": "^11.10.6",

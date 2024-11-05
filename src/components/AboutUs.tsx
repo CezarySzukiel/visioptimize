@@ -95,7 +95,7 @@ const AboutUs: React.FC = () => {
         >
           <Box
             component="img"
-            src={"/Cezary Szukiel.png"}
+            src={"/images/Cezary Szukiel.png"}
             alt={"Cezary Szukiel"}
             sx={{
               display: "block",
