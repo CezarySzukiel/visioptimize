@@ -11,7 +11,7 @@ import {
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import { Link, useLocation } from "react-router-dom";
 import { useTheme } from "@mui/material/styles";
-import { headerHeight } from "../pageSettings";
+import { headerHeight, mainPagePath } from "../pageSettings";
 import offer from "../offer.json";
 
 interface Offer {
@@ -77,7 +77,7 @@ const Header: React.FC = () => {
         key={item.name}
         onClick={handleClose}
         component={Link}
-        to={item.adres}
+        to={`${mainPagePath}${item.adres}`}
       >
         {item.name}
       </MenuItem>
@@ -92,7 +92,7 @@ const Header: React.FC = () => {
       }}
     >
       <Toolbar>
-        <CustomLink to="/">
+        <CustomLink to={mainPagePath}>
           <Box display="flex" alignItems="center">
             <img
               src="Visioptimize logo.png"
@@ -142,7 +142,7 @@ const Header: React.FC = () => {
             {renderMenuItems(offer.websites)}
             {renderMenuItems(offer.applications)}
           </Menu>
-          <CustomLink to="/o-nas">
+          <CustomLink to={`${mainPagePath}/o-nas`}>
             <Button sx={{ textTransform: "none" }} onClick={handleClose}>
               <Box
                 marginRight="1rem"
