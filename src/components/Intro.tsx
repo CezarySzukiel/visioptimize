@@ -55,13 +55,12 @@ const IntroSection: React.FC = () => {
       }}
     >
       <Stack spacing={4}>
-        {/* First Item */}
         <Box>
           <Grid container spacing={2}>
             <Grid item xs={12} md={6}>
               <CenterBox>
                 <img
-                  src="/pozycjonowanie.jpg"
+                  src="pozycjonowanie.jpg"
                   alt="Telefon, na którym stoi globus z pinezką pozycjonowania"
                   style={{
                     width: imgSize,
@@ -78,8 +77,6 @@ const IntroSection: React.FC = () => {
             </Grid>
           </Grid>
         </Box>
-
-        {/* Second Item */}
         <Box>
           <Grid container spacing={2}>
             <Grid item xs={12} md={6}>
@@ -88,7 +85,7 @@ const IntroSection: React.FC = () => {
             <Grid item xs={12} md={6}>
               <CenterBox>
                 <img
-                  src="/nowi klienci.jpg"
+                  src="nowi klienci.jpg"
                   alt="ludzie na ulicy"
                   style={{
                     width: imgSize,
@@ -100,8 +97,6 @@ const IntroSection: React.FC = () => {
             </Grid>
           </Grid>
         </Box>
-
-        {/* Third Item */}
         <Box>
           <Grid container spacing={2}>
             <Grid item xs={12} md={6}>
