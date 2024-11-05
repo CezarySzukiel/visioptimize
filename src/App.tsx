@@ -32,7 +32,7 @@ function App() {
         main: orange[500],
       },
       info: {
-        main: yellow[500],
+        main: "#c0c0c0",
       },
       success: {
         main: blue[500],
