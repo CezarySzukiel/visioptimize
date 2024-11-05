@@ -2,10 +2,18 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import { Container, Typography, Box } from "@mui/material";
 import { headerHeight } from "../pageSettings";
+import ContactForm from "./ContactForm";
 
 const OfferDetail: React.FC<{ offer: any }> = ({ offer }) => {
   return (
-    <Box sx={{ paddingTop: headerHeight, height: "75vh" }}>
+    <Box
+      sx={{
+        paddingTop: headerHeight,
+        height: "75vh",
+        display: "flex",
+        flexDirection: "column",
+      }}
+    >
       <Container sx={{ paddingTop: headerHeight }}>
         <Typography variant="h1" component="h1" gutterBottom>
           {offer.name}
@@ -27,6 +35,7 @@ const OfferDetail: React.FC<{ offer: any }> = ({ offer }) => {
           Cena: {offer.price}
         </Typography>
       </Container>
+      <ContactForm />
     </Box>
   );
 };
