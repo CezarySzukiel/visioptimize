@@ -42,7 +42,12 @@ function ContactForm() {
   };
   const onSubmit = (data: any) => {
     emailjs
-      .send("service_odx5hvu", "template_zi0cz6d", data, "Nm0WEs6_AFiKC5usf")
+      .send(
+        process.env.REACT_APP_EMAILJS_SERVICE_ID || "",
+        process.env.REACT_APP_EMAILJS_TEMPLATE_ID || "",
+        data,
+        process.env.REACT_APP_EMAILJS_USER_ID || "",
+      )
       .then((response) => {})
       .catch((error) => {
         console.error("Błąd przy wysyłaniu emaila", error);

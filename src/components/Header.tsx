@@ -92,7 +92,7 @@ const Header: React.FC = () => {
       }}
     >
       <Toolbar>
-        <CustomLink to={mainPagePath}>
+        <CustomLink to={`${mainPagePath}/`}>
           <Box display="flex" alignItems="center">
             <img
               src="Visioptimize logo.png"
