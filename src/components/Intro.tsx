@@ -60,7 +60,7 @@ const IntroSection: React.FC = () => {
             <Grid item xs={12} md={6}>
               <CenterBox>
                 <img
-                  src="pozycjonowanie.jpg"
+                  src="pozycjonowanie.png"
                   alt="Telefon, na którym stoi globus z pinezką pozycjonowania"
                   style={{
                     width: imgSize,
@@ -85,7 +85,7 @@ const IntroSection: React.FC = () => {
             <Grid item xs={12} md={6}>
               <CenterBox>
                 <img
-                  src="nowi klienci.jpg"
+                  src="nowi klienci.png"
                   alt="ludzie na ulicy"
                   style={{
                     width: imgSize,
@@ -102,7 +102,7 @@ const IntroSection: React.FC = () => {
             <Grid item xs={12} md={6}>
               <CenterBox>
                 <img
-                  src="dochody.jpg"
+                  src="dochody.png"
                   alt="kobieta z laptopem, spadające banknoty"
                   style={{
                     width: imgSize,
