@@ -3,6 +3,7 @@ import { AppBar } from "@mui/material";
 import HeroSection from "./Hero";
 import IntroSection from "./Intro";
 import OfferSection from "./Offer";
+import ContactForm from "./ContactForm";
 
 function Home() {
   return (
@@ -10,6 +11,7 @@ function Home() {
       <HeroSection />
       <IntroSection />
       <OfferSection />
+      <ContactForm />
     </div>
   );
 }
