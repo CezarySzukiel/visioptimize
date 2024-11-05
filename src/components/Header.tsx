@@ -95,13 +95,10 @@ const Header: React.FC = () => {
         <CustomLink to="/">
           <Box display="flex" alignItems="center">
             <img
-              src="/Visioptimize_logo.png"
+              src="/Visioptimize logo.png"
               alt="Logo"
-              style={{ marginRight: "16px", height: "40px" }}
+              style={{ marginRight: "16px", height: "60px" }}
             />
-            <Typography variant="h5" component="h5">
-              Visioptimize
-            </Typography>
           </Box>
         </CustomLink>
         <Box flexGrow={1} />

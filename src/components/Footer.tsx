@@ -1,14 +1,23 @@
 import React from "react";
 import { Box, AppBar, Toolbar, Typography } from "@mui/material";
+import { useTheme } from "@mui/material/styles";
 
 const Footer: React.FC = () => {
+  const theme = useTheme();
   return (
     <AppBar
       position="static"
       color="primary"
-      style={{ top: "auto", bottom: 0, marginTop: "20px" }}
+      style={{ top: "auto", bottom: 0, marginTop: "10rem" }}
     >
-      <Toolbar sx={{ display: "flex", justifyContent: "space-around" }}>
+      <Toolbar
+        sx={{
+          display: "flex",
+          justifyContent: "space-around",
+          borderTop: `1px solid ${theme.palette.secondary.light}`,
+          margin: "0 3rem",
+        }}
+      >
         <Box id="kontakt" sx={{ marginBottom: "2rem" }}>
           <Typography
             variant="body1"

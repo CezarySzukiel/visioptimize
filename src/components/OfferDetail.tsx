@@ -7,7 +7,7 @@ const OfferDetail: React.FC<{ offer: any }> = ({ offer }) => {
   return (
     <Box sx={{ paddingTop: headerHeight, height: "75vh" }}>
       <Container sx={{ paddingTop: headerHeight }}>
-        <Typography variant="h4" component="h1" gutterBottom>
+        <Typography variant="h1" component="h1" gutterBottom>
           {offer.name}
         </Typography>
         <Typography
