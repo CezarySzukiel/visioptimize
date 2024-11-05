@@ -13,8 +13,8 @@ const createRoutes = (offers: any[], basePath: string): RouteObject[] => {
 };
 
 const routes: RouteObject[] = [
-  { path: "/", element: <Home /> },
-  { path: "/o-nas", element: <AboutUs /> },
+  { path: "/visioptimize", element: <Home /> },
+  { path: "/visioptimize/o-nas", element: <AboutUs /> },
   ...createRoutes(offer.packages, ""),
   ...createRoutes(offer.google_my_business, ""),
   ...createRoutes(offer.websites, ""),
