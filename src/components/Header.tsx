@@ -95,7 +95,7 @@ const Header: React.FC = () => {
         <CustomLink to="/">
           <Box display="flex" alignItems="center">
             <img
-              src="/Visioptimize logo.png"
+              src="Visioptimize logo.png"
               alt="Logo"
               style={{ marginRight: "16px", height: "60px" }}
             />
