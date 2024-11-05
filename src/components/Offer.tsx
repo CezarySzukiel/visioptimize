@@ -109,7 +109,12 @@ const OfferPackage: React.FC<OfferPackage> = ({ title, offers }) => {
   return (
     <>
       <CustomBox>
-        <Typography variant="h3" component="h2" gutterBottom>
+        <Typography
+          variant="h3"
+          component="h2"
+          gutterBottom
+          sx={{ paddingTop: "1rem" }}
+        >
           {title}
         </Typography>
       </CustomBox>
