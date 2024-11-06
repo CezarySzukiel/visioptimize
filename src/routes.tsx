@@ -14,8 +14,7 @@ const createRoutes = (offers: any[], basePath: string): RouteObject[] => {
 };
 
 const routes: RouteObject[] = [
-  //   { path: `${mainPagePath}/`, element: <Home /> },
-  { path: "/", element: <Home /> },
+  { path: `${mainPagePath}/`, element: <Home /> },
   { path: `${mainPagePath}/o-nas`, element: <AboutUs /> },
   ...createRoutes(offer.packages, ""),
   ...createRoutes(offer.google_my_business, ""),
