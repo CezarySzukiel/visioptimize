@@ -20,7 +20,7 @@ function ContactForm() {
   } = useForm<IFormInput>();
   const textFieldSX = {
     "& .MuiOutlinedInput-root": {
-      backgroundColor: theme.palette.primary.main, // Set background color
+      backgroundColor: theme.palette.primary.main,
       color: "gray",
       "& fieldset": {
         borderColor: "gray",
