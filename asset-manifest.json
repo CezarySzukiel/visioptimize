@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/visioptomize/static/css/main.10d6e551.css",
-    "main.js": "/visioptomize/static/js/main.2b62f823.js",
+    "main.js": "/visioptomize/static/js/main.dfb22030.js",
     "static/js/453.34bbb469.chunk.js": "/visioptomize/static/js/453.34bbb469.chunk.js",
     "static/media/slick.svg": "/visioptomize/static/media/slick.2630a3e3eab21c607e21.svg",
     "static/media/slick.eot": "/visioptomize/static/media/slick.a4e97f5a2a64f0ab1323.eot",
@@ -9,11 +9,11 @@
     "static/media/slick.woff": "/visioptomize/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/visioptomize/index.html",
     "main.10d6e551.css.map": "/visioptomize/static/css/main.10d6e551.css.map",
-    "main.2b62f823.js.map": "/visioptomize/static/js/main.2b62f823.js.map",
+    "main.dfb22030.js.map": "/visioptomize/static/js/main.dfb22030.js.map",
     "453.34bbb469.chunk.js.map": "/visioptomize/static/js/453.34bbb469.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.10d6e551.css",
-    "static/js/main.2b62f823.js"
+    "static/js/main.dfb22030.js"
   ]
 }
