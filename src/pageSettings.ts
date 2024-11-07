@@ -4,4 +4,4 @@ export const containersColor: string = "rgb(0 0 0 / 50%)";
 
 export const containersBorderRadius: string = "8px";
 
-export const mainPagePath: string = "/visioptomize";
+export const mainPagePath: string = "";
