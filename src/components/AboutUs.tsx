@@ -16,7 +16,13 @@ const AboutUs: React.FC = () => {
         <Box
           id="about-text"
           sx={{
-            marginTop: "5rem",
+            marginTop: {
+              xs: "1rem",
+              sm: "2rem",
+              md: "3rem",
+              lg: "4rem",
+              xl: "5rem",
+            },
           }}
         >
           <Box>
@@ -73,39 +79,48 @@ const AboutUs: React.FC = () => {
           </Box>
         </Box>
         <Box
-          id="avatar"
           sx={{
-            position: "relative",
-            display: "inline-block",
-            width: "100%",
             minWidth: "50%",
-            marginRight: "5rem",
-            "&::before": {
-              content: '""',
-              position: "absolute",
-              top: 0,
-              left: 0,
-              right: 0,
-              bottom: 0,
-              boxShadow: `inset 0 0 40px 40px ${theme.palette.primary.main}`,
-              pointerEvents: "none",
-              zIndex: 1,
-            },
+            marginRight: { xs: "0", sm: "2rem", md: "3rem", lg: "4rem" },
           }}
         >
           <Box
-            component="img"
-            src={"Cezary Szukiel.png"}
-            alt={"Cezary Szukiel"}
+            id="avatar"
             sx={{
-              display: "block",
-              width: "100%",
-              height: "auto",
               position: "relative",
-              zIndex: 0,
-              marginRight: "5rem",
+              display: "inline-block",
+              width: "100%",
+
+              "&::before": {
+                content: '""',
+                position: "absolute",
+                top: 0,
+                left: 0,
+                right: 0,
+                bottom: 0,
+                boxShadow: {
+                  xs: `inset 0 0px 20px 20px ${theme.palette.primary.main}`,
+                  sm: `inset 0 0px 40px 40px ${theme.palette.primary.main}`,
+                },
+                pointerEvents: "none",
+                zIndex: 1,
+              },
             }}
-          />
+          >
+            <Box
+              component="img"
+              src={"Cezary Szukiel.png"}
+              alt={"Cezary Szukiel"}
+              sx={{
+                display: "block",
+                width: "100%",
+                height: "auto",
+                position: "relative",
+                zIndex: 0,
+                marginRight: "5rem",
+              }}
+            />
+          </Box>
         </Box>
       </Box>
     </Box>
