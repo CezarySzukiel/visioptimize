@@ -58,7 +58,7 @@ function ContactForm() {
     <Box
       sx={{
         borderTop: `1px solid ${theme.palette.secondary.light}`,
-        margin: "5rem 8rem",
+        margin: "5rem 0",
         display: "flex",
         flexDirection: "column",
         alignItems: "center",

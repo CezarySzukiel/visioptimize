@@ -57,7 +57,7 @@ const OfferBox: React.FC<Offer & { index: number }> = ({
   });
 
   return (
-    <Grid item xs={12} sm={8} md={4}>
+    <Grid item xs={9} sm={4} md={4} lg={3} xl={3}>
       <div ref={ref}>
         <Fade
           in={inView}
@@ -94,7 +94,7 @@ const OfferBox: React.FC<Offer & { index: number }> = ({
                 {name}
               </Typography>
 
-              <Typography variant="h6" component="p" gutterBottom>
+              <Typography variant="h6" component="h6" gutterBottom>
                 Cena {price}
               </Typography>
             </Container>

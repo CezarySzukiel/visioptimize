@@ -11,7 +11,12 @@ import {
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import { Link, useLocation } from "react-router-dom";
 import { useTheme } from "@mui/material/styles";
-import { headerHeight, mainPagePath } from "../pageSettings";
+import {
+  headerHeight,
+  mainPagePath,
+  footerFontSize,
+  headerButtonsMargin,
+} from "../pageSettings";
 import offer from "../offer.json";
 
 interface Offer {
@@ -52,7 +57,7 @@ const CustomLink: React.FC<CustomLinkProps> = ({ to, children }) => {
     <Link
       to={to}
       onClick={handleClick}
-      style={{ color: "inherit", textDecoration: "none" }}
+      style={{ color: "inherit", textDecoration: "none", padding: "0" }}
     >
       {children}
     </Link>
@@ -78,6 +83,15 @@ const Header: React.FC = () => {
         onClick={handleClose}
         component={Link}
         to={`${mainPagePath}${item.adres}`}
+        sx={{
+          lineHeight: {
+            xs: "1",
+            sm: "1.2",
+            md: "1.4",
+            lg: "1.6",
+            xl: "1.8",
+          },
+        }}
       >
         {item.name}
       </MenuItem>
@@ -94,10 +108,20 @@ const Header: React.FC = () => {
       <Toolbar>
         <CustomLink to={`${mainPagePath}`}>
           <Box display="flex" alignItems="center">
-            <img
+            <Box
+              component="img"
               src="Visioptimize logo.png"
               alt="Logo"
-              style={{ marginRight: "16px", height: "60px" }}
+              sx={{
+                marginRight: "16px",
+                width: {
+                  xs: "80px",
+                  sm: "150px",
+                  md: "230px",
+                  lg: "260px",
+                  xl: "300px",
+                },
+              }}
             />
           </Box>
         </CustomLink>
@@ -111,6 +135,8 @@ const Header: React.FC = () => {
             sx={{
               color: `${theme.palette.text.primary}`,
               textTransform: "none",
+              fontSize: footerFontSize,
+              marginRight: headerButtonsMargin,
             }}
           >
             Oferta
@@ -143,11 +169,15 @@ const Header: React.FC = () => {
             {renderMenuItems(offer.applications)}
           </Menu>
           <CustomLink to={`${mainPagePath}/o-nas`}>
-            <Button sx={{ textTransform: "none" }} onClick={handleClose}>
+            <Button
+              sx={{ textTransform: "none", margin: "0" }}
+              onClick={handleClose}
+            >
               <Box
-                marginRight="1rem"
                 sx={{
                   color: `${theme.palette.text.primary}`,
+                  fontSize: footerFontSize,
+                  marginRight: headerButtonsMargin,
                 }}
               >
                 O nas
@@ -160,6 +190,8 @@ const Header: React.FC = () => {
                 marginRight="1rem"
                 sx={{
                   color: `${theme.palette.text.primary}`,
+                  fontSize: footerFontSize,
+                  marginRight: headerButtonsMargin,
                 }}
               >
                 Kontakt

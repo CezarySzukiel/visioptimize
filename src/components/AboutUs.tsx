@@ -20,10 +20,10 @@ const AboutUs: React.FC = () => {
           }}
         >
           <Box>
-            <Typography variant="h1" component="h1" gutterBottom>
+            <Typography variant="h3" component="h1" gutterBottom>
               Nazywam się Cezary Szukiel
             </Typography>
-            <Typography variant="h6" component="p" gutterBottom>
+            <Typography variant="body1" component="h6" gutterBottom>
               Jestem programistą z doświadczeniem w tworzeniu aplikacji
               webowych, które pomagają firmom zwiększać ich obecność w sieci.
               Moim celem jest dostarczanie narzędzi, które realnie wspierają
@@ -33,10 +33,10 @@ const AboutUs: React.FC = () => {
             </Typography>
           </Box>
           <Box sx={{ marginTop: "3rem" }}>
-            <Typography variant="h2" component="h2" gutterBottom>
+            <Typography variant="h3" component="h2" gutterBottom>
               Z miłości do pomagania
             </Typography>
-            <Typography variant="h6" component="p" gutterBottom>
+            <Typography variant="body1" component="h6" gutterBottom>
               Zajmuję się SEO wizytówek Google oraz stron internetowych,
               ponieważ chcę pomagać ludziom i firmom pozyskiwać więcej klientów
               i rozwijać ich działalność. Każdy projekt jest dla mnie okazją do
@@ -47,10 +47,10 @@ const AboutUs: React.FC = () => {
             </Typography>
           </Box>
           <Box sx={{ marginTop: "3rem" }}>
-            <Typography variant="h2" component="h2" gutterBottom>
+            <Typography variant="h3" component="h2" gutterBottom>
               Profesjonalizm i zaangażowanie
             </Typography>
-            <Typography variant="h6" component="p" gutterBottom>
+            <Typography variant="body1" component="h6" gutterBottom>
               Każde zlecenie traktuję indywidualnie i wkładam w nie pełne
               zaangażowanie. Moja praca to dla mnie coś więcej niż tylko zadania
               – to relacja oparta na zaufaniu i wspólnych celach. Satysfakcja
@@ -59,10 +59,10 @@ const AboutUs: React.FC = () => {
             </Typography>
           </Box>
           <Box sx={{ marginTop: "3rem" }}>
-            <Typography variant="h2" component="h2" gutterBottom>
+            <Typography variant="h3" component="h2" gutterBottom>
               Umiejętności techniczne
             </Typography>
-            <Typography variant="h6" component="p" gutterBottom>
+            <Typography variant="body1" component="h6" gutterBottom>
               W pracy korzystam z szerokiego wachlarza umiejętności
               programistycznych, w tym języków takich jak Python, JavaScript,
               TypeScript oraz frameworków Django czy React. Mam również

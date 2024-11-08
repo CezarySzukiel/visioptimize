@@ -8,7 +8,11 @@ import {
   Stack,
   CardContent,
 } from "@mui/material";
-import { containersColor, containersBorderRadius } from "../pageSettings";
+import {
+  containersColor,
+  containersBorderRadius,
+  imgSize,
+} from "../pageSettings";
 import { useTheme } from "@mui/material/styles";
 
 interface TextSectionProps {
@@ -35,16 +39,26 @@ const TextSection: React.FC<TextSectionProps> = ({ text }) => {
   return (
     <CenterBox>
       <CardContent>
-        <Typography variant="h6" component="h6" sx={{ textAlign: "center" }}>
+        <Typography variant="h4" component="h4" sx={{ textAlign: "center" }}>
           {text}
         </Typography>
       </CardContent>
     </CenterBox>
   );
 };
+
+const LocalGridItem: React.FC<{ children: React.ReactNode }> = ({
+  children,
+}) => {
+  return (
+    <Grid item xs={6} sm={6} md={6}>
+      {children}
+    </Grid>
+  );
+};
+
 const IntroSection: React.FC = () => {
   const theme = useTheme();
-  const imgSize: string = "200px";
 
   return (
     <Container
@@ -57,64 +71,67 @@ const IntroSection: React.FC = () => {
       <Stack spacing={4}>
         <Box>
           <Grid container spacing={2}>
-            <Grid item xs={12} md={6}>
+            <LocalGridItem>
               <CenterBox>
-                <img
+                <Box
+                  component="img"
                   src="pozycjonowanie.png"
                   alt="Telefon, na którym stoi globus z pinezką pozycjonowania"
-                  style={{
+                  sx={{
                     width: imgSize,
                     borderRadius: containersBorderRadius,
                     boxShadow: `0px 0px 15px 0px ${theme.palette.primary.dark}`,
                   }}
                 />
               </CenterBox>
-            </Grid>
-            <Grid item xs={12} md={6}>
+            </LocalGridItem>
+            <LocalGridItem>
               <TextSection
                 text={"Popraw widoczność Twojej firmy w internecie."}
               />
-            </Grid>
+            </LocalGridItem>
           </Grid>
         </Box>
         <Box>
           <Grid container spacing={2}>
-            <Grid item xs={12} md={6}>
+            <LocalGridItem>
               <TextSection text={"Znajdź nowych klientów"} />
-            </Grid>
-            <Grid item xs={12} md={6}>
+            </LocalGridItem>
+            <LocalGridItem>
               <CenterBox>
-                <img
+                <Box
+                  component="img"
                   src="nowi klienci.png"
                   alt="ludzie na ulicy"
-                  style={{
+                  sx={{
                     width: imgSize,
                     borderRadius: containersBorderRadius,
                     boxShadow: `0px 0px 15px 0px ${theme.palette.primary.dark}`,
                   }}
                 />
               </CenterBox>
-            </Grid>
+            </LocalGridItem>
           </Grid>
         </Box>
         <Box>
           <Grid container spacing={2}>
-            <Grid item xs={12} md={6}>
+            <LocalGridItem>
               <CenterBox>
-                <img
+                <Box
+                  component="img"
                   src="dochody.png"
                   alt="kobieta z laptopem, spadające banknoty"
-                  style={{
+                  sx={{
                     width: imgSize,
                     borderRadius: containersBorderRadius,
                     boxShadow: `0px 0px 15px 0px ${theme.palette.primary.dark}`,
                   }}
                 />
               </CenterBox>
-            </Grid>
-            <Grid item xs={12} md={6}>
+            </LocalGridItem>
+            <LocalGridItem>
               <TextSection text={"Zwiększ swoje przychody."} />
-            </Grid>
+            </LocalGridItem>
           </Grid>
         </Box>
       </Stack>
